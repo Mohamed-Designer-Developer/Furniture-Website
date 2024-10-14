@@ -1,0 +1,324 @@
+/* the variables are here */
+:root {
+    --general-color: #3c3a47;
+    --heading-1: 3.5rem;
+    --heading-2: 1.75rem;
+    --bg-large-contact: #3c3a47;
+    --inputs-bg: #ffffff1a;
+    --focused-color: #ffffff33;
+    --border-color: #ffffffcc;
+}
+
+/* General styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    font-family: poppins, sans-serif;
+    line-height: 1.5;
+    color: var(--general-color);
+}
+
+
+/* Navigations styles */
+
+header nav .navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+header nav .navigation .header-nav ul {
+    display: flex;
+    gap: 4rem;
+    list-style-type: none;
+}
+
+header nav .navigation .header-nav ul li a {
+    text-decoration: none;
+    color: #3c3a47;
+}
+
+/* Landing page styles */
+
+.landing {
+    text-align: center;
+}
+
+#home .landing h1 {
+    margin: 10rem 0rem 1rem 0rem;
+    font-size: var(--heading-1);
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+#home .landing h2 {
+    font-size: var(--heading-2);
+    font-weight: 300;
+    color: #3c3a47cc;
+    margin-bottom: 5rem;
+}
+
+
+a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #9f7658;
+}
+
+.btn {
+    border: 1px solid #4f4914;
+    padding: 1.3rem 3.5rem;
+}
+
+/* Psuedo Classes */
+
+header nav .navigation .header-nav ul li a:hover {
+    border-bottom: 1.5px solid var(--general-color);
+}
+
+.btn:hover {
+    background-color: #9f7658;
+    color: white;
+    font-weight: bold;
+}
+
+#gallery {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 180px;
+    text-align: center;
+}
+
+#gallery header,
+#footer .footer-paragraph {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#gallery .header {
+    margin: 8rem 0rem .5rem 0rem;
+}
+
+#gallery h2 {
+    font-size: var(--heading-2);
+    margin-bottom: 2.5rem;
+}
+
+.picture img {
+    width: 350px;
+    margin-bottom: 2rem;
+}
+
+.gallery-pictures {
+    display: grid;
+    /* the landing page reponsiveness is here */
+    grid-template-columns: repeat(auto-fit, 20rem);
+    gap: 3.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+.picture {
+    text-align: left;
+}
+
+h4 {
+    margin-bottom: 1.5rem;
+}
+
+.footer-text,
+#footer p {
+    margin: 3rem 0rem 3rem 0rem;
+}
+
+.contact-container {
+    /* background-color: var(--bg-large-contact); */
+    width: 85%;
+    margin: 0 auto;
+}
+
+.small-container {
+    width: 40%;
+    margin: 0 auto;
+    padding: 5rem 0rem;
+}
+
+.small-container p {
+    font-weight: 200;
+    line-height: 2.5px;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+.small-container h3,
+#footer h3 {
+    font-weight: 700;
+    line-height: 2.5px;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+form {
+    margin-top: 60px;
+}
+
+form input,
+form textarea {
+    border: 1px solid black;
+    outline: none;
+    width: 100%;
+    padding: 20px;
+    resize: none;
+    font-size: 14px;
+}
+
+form input:focus,
+form textarea:focus {
+    background-color: var(--focused-color);
+}
+
+form label {
+    text-transform: uppercase;
+}
+
+form div {
+    margin-bottom: 40px;
+}
+
+#contact button {
+    background-color: transparent;
+    border: 1px solid black;
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #fff;
+    color: #3c3a47;
+}
+
+
+#footer {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footer footer {
+    margin-top: 129px;
+    margin-bottom: 190px;
+}
+
+.visit {
+    font-size: 1.75rem;
+}
+
+.location {
+    font-size: .75rem;
+}
+
+#footer img {
+    margin-left: 40px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+/* responsive Website */
+@media all and (max-width: 900px) {
+    
+    /* the landing page reponsiveness is here */
+    .header-nav {
+        /* visibility: hidden; */
+        display: none;
+        margin-top: 120px;
+        transition: .5s ease-in-out;
+    }
+
+    .image {
+        margin-top: 30px;
+        transition: .5s ease-in-out;
+    }
+
+    #home .landing h1 {
+        margin: 5rem 0rem 1rem 0rem;
+        font-size: 1.65rem;
+        font-weight: 700;
+        letter-spacing: -1px;
+    }
+    
+    #home .landing h2 {
+        font-size: .85rem;
+        font-weight: 300;
+        color: #3c3a47cc;
+        margin-bottom: 5rem;
+        margin-top: 2rem;
+    }
+
+    .btn {
+        transition: .5s ease-in-out;
+        border: 1px solid #4f4914;
+        padding: .45em 1rem;
+    }
+
+    /* the Gallery infos reponsiveness is here */
+    
+    #gallery header,
+    #footer .footer-paragraph,
+    .footer-text {
+        font-size: 12px;
+        line-height: 30px;
+        transition: .5s ease-in-out;
+    }
+
+ 
+    
+    /* the contact section reponsiveness is here */
+    
+    .contact-container {
+        transition: .5s ease-in-out;
+        width: 100%;
+    }
+
+    .small-container {
+        width: 80%;
+        transition: .5s ease-in-out;
+    }
+    
+    .small-container h3,
+    #footer h3 {
+        transition: .5s ease-in-out;
+        font-size: 1.75rem;
+    }
+}
+
+
+/* responsive Website */
+@media all and (max-width: 1400px) {
+    .small-container h3,
+    #footer h3 {
+        transition: .5s ease-in-out;
+        font-size: 1.35rem;
+    }
+}
